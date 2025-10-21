@@ -332,18 +332,18 @@ interface EncryptionParams {
 - Transaction: https://sepolia.etherscan.io/tx/0x...
 
 **Frontend Applications**:
-- Next.js Demo: https://fhevm-nextjs-demo.vercel.app
-- Documentation Site: https://fhevm-sdk-docs.vercel.app
+- Next.js Demo: https://fhe-court-investigation.vercel.app/
+- Example Application: Anonymous Court Investigation System
 
 **Package Repository**:
-- GitHub: https://github.com/your-username/fhevm-react-template
+- GitHub: https://github.com/IrwinDenesik/fhevm-react-template
 - NPM: https://www.npmjs.com/package/@fhevm/sdk
 
 ### Access Instructions
 
 ```bash
 # Clone repository
-git clone https://github.com/your-username/fhevm-react-template.git
+git clone https://github.com/IrwinDenesik/fhevm-react-template.git
 
 # Install dependencies
 cd fhevm-react-template
@@ -355,7 +355,7 @@ npm run build:sdk
 # Run Next.js example
 npm run dev:nextjs
 
-# Visit http://localhost:3000
+# Visit the local development server
 ```
 
 ---
@@ -503,11 +503,11 @@ This project builds upon the excellent work of:
 
 ## 📞 Contact & Support
 
-- **GitHub**: https://github.com/your-username/fhevm-react-template
-- **Issues**: https://github.com/your-username/fhevm-react-template/issues
-- **Discussions**: https://github.com/your-username/fhevm-react-template/discussions
+- **GitHub**: https://github.com/IrwinDenesik/fhevm-react-template
+- **Live Demo**: https://fhe-court-investigation.vercel.app/
+- **Issues**: https://github.com/IrwinDenesik/fhevm-react-template/issues
+- **Discussions**: https://github.com/IrwinDenesik/fhevm-react-template/discussions
 - **Zama Discord**: https://discord.gg/zama
-- **Email**: your-email@example.com
 
 ---
 
@@ -543,7 +543,7 @@ This project builds upon the excellent work of:
 
 **Status**: ✅ Ready for Review
 **Bounty**: Zama Universal FHEVM SDK Challenge
-**Submission Date**: 2025-10-26
+ 
 
 ---
 
