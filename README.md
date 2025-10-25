@@ -9,8 +9,12 @@
 
 **Built for Zama Bounty Challenge** - A complete, production-ready SDK that makes FHE development simple, consistent, and developer-friendly.
 
-**🌐 Live Demo**: [View Demo](https://your-demo.vercel.app)
-**📹 Video Demo**: [Watch Video](./demo.mp4)
+**🌐 Live Demo**: [https://fhe-court-investigation.vercel.app/](https://fhe-court-investigation.vercel.app/)
+
+**📹 Video Demo**: Download and watch `demo.mp4` (video demonstration file included in repository)
+
+**💻 GitHub Repository**: [https://github.com/IrwinDenesik/fhevm-react-template](https://github.com/IrwinDenesik/fhevm-react-template)
+
 **📦 NPM Package**: `@fhevm/sdk`
 
 ---
@@ -565,8 +569,8 @@ MIT License - see [LICENSE](LICENSE) for details.
 ## 📞 Support
 
 - **Documentation**: [docs/](./docs/)
-- **Issues**: [GitHub Issues](https://github.com/your-username/fhevm-react-template/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/your-username/fhevm-react-template/discussions)
+- **Issues**: [GitHub Issues](https://github.com/IrwinDenesik/fhevm-react-template/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/IrwinDenesik/fhevm-react-template/discussions)
 - **Zama Discord**: https://discord.gg/zama
 
 ---
