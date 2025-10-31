@@ -11,7 +11,7 @@
 
 **🌐 Live Demo**: [https://fhe-court-investigation.vercel.app/](https://fhe-court-investigation.vercel.app/)
 
-**📹 Video Demo**: Download and watch `demo.mp4` (video demonstration file included in repository)
+**📹 Video Demo**: Video demonstration file `demo.mp4` should be created and included in repository
 
 **💻 GitHub Repository**: [https://github.com/IrwinDenesik/fhevm-react-template](https://github.com/IrwinDenesik/fhevm-react-template)
 
@@ -49,26 +49,57 @@
 
 ## 🏗️ Architecture
 
-### SDK Structure
+### SDK Structure ✅ COMPLETE
 
 ```
 @fhevm/sdk
-├── Core (Framework-Agnostic)
+├── Core (Framework-Agnostic) ✅
 │   ├── FhevmClient - Main client
 │   ├── Encryption - encryptUint8/16/32/64, encryptBool, encryptAddress
 │   ├── Decryption - userDecrypt (EIP-712), publicDecrypt, batchDecrypt
 │   └── Types & Constants
 │
-├── React Bindings (Optional)
-│   ├── FhevmProvider - Context provider
-│   ├── useFhevm() - Access client
-│   ├── useEncrypt() - Encryption hook
-│   └── useDecrypt() - Decryption hook
+├── React Bindings (Optional) ✅ NEW!
+│   ├── Provider.tsx - FhevmProvider context
+│   ├── useFhevm.ts - Access FHEVM client
+│   ├── useEncrypt.ts - Encryption with state management
+│   └── useDecrypt.ts - Decryption with callbacks
 │
-└── Utilities
+└── Utilities ✅
     ├── Validation - Type checking
     ├── Helpers - Format, retry, etc.
     └── Errors - Error handling
+```
+
+### Next.js Example Structure ✅ COMPLETE
+
+```
+nextjs-anonymous-court/
+├── src/app/              # App Router ✅
+│   ├── layout.tsx        # FhevmProvider setup
+│   ├── page.tsx          # Main demo page
+│   ├── globals.css       # Styles
+│   └── api/              # API Routes
+│       ├── fhe/          # Encrypt, decrypt, compute
+│       └── keys/         # Key management
+│
+├── src/components/       # Components ✅
+│   ├── ui/               # Button, Input, Card
+│   ├── fhe/              # FHE demos & manager
+│   └── examples/         # Banking, Medical use cases
+│
+├── src/lib/              # Utilities ✅
+│   ├── fhe/              # FHE client, server, keys
+│   └── utils/            # Security, validation
+│
+├── src/hooks/            # Custom Hooks ✅
+│   ├── useFHE.ts
+│   ├── useEncryption.ts
+│   └── useComputation.ts
+│
+└── src/types/            # TypeScript ✅
+    ├── fhe.ts
+    └── api.ts
 ```
 
 ### Data Flow
@@ -184,10 +215,27 @@ fhevm-react-template/
 │       └── README.md
 │
 ├── examples/
-│   ├── nextjs-anonymous-court/     # Next.js + SDK example
-│   │   ├── app/                    # Next.js 15 App Router
-│   │   ├── components/             # React components
-│   │   ├── contracts/              # Contract ABIs
+│   ├── nextjs-anonymous-court/     # Next.js + SDK example (COMPLETE)
+│   │   ├── src/
+│   │   │   ├── app/                # Next.js 15 App Router
+│   │   │   │   ├── layout.tsx      # Root layout with FhevmProvider
+│   │   │   │   ├── page.tsx        # Home page with demos
+│   │   │   │   ├── globals.css     # Global styles
+│   │   │   │   └── api/            # API Routes
+│   │   │   │       ├── fhe/        # FHE operations (encrypt, decrypt, compute)
+│   │   │   │       └── keys/       # Key management
+│   │   │   ├── components/         # React components
+│   │   │   │   ├── ui/             # Base UI (Button, Input, Card)
+│   │   │   │   ├── fhe/            # FHE components (EncryptionDemo, ComputationDemo, KeyManager)
+│   │   │   │   └── examples/       # Use cases (BankingExample, MedicalExample)
+│   │   │   ├── lib/                # Libraries
+│   │   │   │   ├── fhe/            # FHE utilities (client, server, keys, types)
+│   │   │   │   └── utils/          # Helpers (security, validation)
+│   │   │   ├── hooks/              # Custom hooks (useFHE, useEncryption, useComputation)
+│   │   │   └── types/              # TypeScript types (fhe, api)
+│   │   ├── next.config.js
+│   │   ├── tsconfig.json
+│   │   ├── tailwind.config.ts
 │   │   └── package.json
 │   │
 │   └── anonymous-court-investigation/  # Hardhat example
@@ -292,21 +340,35 @@ await decrypt({ handle, contractAddress });
 
 ## 📚 Examples
 
-### Example 1: Next.js Anonymous Court System
+### Example 1: Next.js Anonymous Court System ✅ COMPLETE
 
-Full-featured Next.js application demonstrating SDK integration:
+Full-featured Next.js 15 application demonstrating complete SDK integration:
 
 ```bash
 # Run Next.js example
 npm run dev:nextjs
+
+# Navigate to http://localhost:3000
 ```
 
 **Features:**
-- Server-side rendering with Next.js 15
-- Client-side FHE encryption
-- MetaMask integration
-- Real-time updates
-- Responsive UI with Tailwind CSS
+- ✅ Next.js 15 App Router with React Server Components
+- ✅ Complete FHE workflow (encryption, decryption, computation)
+- ✅ React hooks integration (useFhevm, useEncrypt, useDecrypt)
+- ✅ Multiple demo pages (FHE Demo, Banking, Medical)
+- ✅ API routes for server-side FHE operations
+- ✅ Beautiful UI with Tailwind CSS
+- ✅ Full TypeScript support
+- ✅ Comprehensive component library
+- ✅ Real-world use case examples
+
+**Structure:**
+- **App Router** - Modern Next.js routing with layouts
+- **API Routes** - FHE encryption, decryption, computation, key management
+- **Components** - Reusable UI and FHE-specific components
+- **Hooks** - Custom React hooks for FHE operations
+- **Lib** - Utility functions and type definitions
+- **Examples** - Banking and medical privacy use cases
 
 ### Example 2: Anonymous Court Investigation (Hardhat)
 
